@@ -1,0 +1,102 @@
+.dark__toggle {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+
+    .text {
+        position: relative;
+        top: -4px;
+    }
+
+    .switch {
+        display: inline-block;
+        height: 34px;
+        position: relative;
+        width: 60px;
+
+        input {
+            display: none;
+        }
+
+        .mode-icon {
+            color: var(--color-primary);
+            display: inline-block;
+            bottom: 0;
+            cursor: pointer;
+            left: 9px;
+            right: 0;
+            position: absolute;
+            top: 9px;
+            animation: MODE-CHANGE .5s;
+            transition: var(--transition);
+
+            &::before {
+                background: #fff;
+                bottom: 4px;
+                content: '';
+                height: 26px;
+                left: 4px;
+                position: absolute;
+                transition: var(--transition);
+                width: 26px;
+            }
+        }
+
+        .slider {
+            background: var(--color-primary);
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            right: 0;
+            position: absolute;
+            top: 0;
+            transition: var(--transition);
+
+            &::before {
+                background: #fff;
+                bottom: 4px;
+                content: '';
+                height: 26px;
+                left: 4px;
+                position: absolute;
+                transition: var(--transition);
+                width: 26px;
+            }
+        }
+
+        .round {
+            border-radius: 34px;
+
+            &::before {
+                border-radius: 50%;
+                background: var(--color-bg);
+            }
+        }
+    }
+
+    input:checked+.slider {
+        background: var(--color-primary);
+    }
+
+    input:checked+.slider::before {
+        transform: translateX(26px);
+    }
+
+    .mode-light {
+        transform: translateX(26px);
+    }
+}
+
+@keyframes MODE-CHANGE {
+    0% {
+        opacity: 0;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
