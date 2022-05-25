@@ -1,0 +1,78 @@
+.services__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+
+    .service {
+        background: var(--color-bg-dark-variant);
+        border-radius: 0 0 2rem 2rem;
+        border: 1px solid var(--color-primary-dark);
+        height: fit-content;
+        transition: var(--transition);
+
+        &:hover {
+            background: transparent;
+            border-color: var(--color-white);
+            cursor: default;
+
+            .service__head {
+                background-color: var(--color-white);
+            }
+        }
+
+        .service__head {
+            background-color: var(--color-primary-dark);
+            padding: 2rem;
+            border-radius: 0 0 2rem 2rem;
+            box-shadow: 0 2rem 1rem rgba($color: #000000, $alpha: .1);
+            transition: var(--transition);
+
+            h3 {
+                color: var(--color-bg-dark);
+                text-align: center;
+                transition: var(--transition);
+            }
+        }
+
+        .service__list {
+            padding: 2rem;
+
+            li {
+                display: flex;
+                gap: 1rem;
+                margin-bottom: .8rem;
+            }
+
+            .service__list-icon {
+                margin-top: 6px;
+                color: var(--color-primary-dark);
+            }
+
+            p {
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+/* ===============MEDIA QUERIES (MED DEVICES)============== */
+
+@media screen and (max-width:1024px) {
+    .services__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+        .service {
+            height: auto;
+        }
+    }
+}
+
+/* ===============MEDIA QUERIES (SMALL DEVICES)============== */
+
+@media screen and (max-width:600px) {
+    .services__container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
