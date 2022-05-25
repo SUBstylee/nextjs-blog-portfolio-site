@@ -204,13 +204,17 @@ a:hover {
 
 input,
 textarea {
-    width: 100%;
     padding: 1.5rem;
     border-radius: .5rem;
     background: transparent;
     border: 2px solid var(--color-primary);
     resize: none;
     color: var(--color-text);
+}
+
+input:not([type='checkbox']),
+textarea {
+    width: 100%;
 }
 
 // img {

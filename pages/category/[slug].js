@@ -14,7 +14,11 @@ const CategoryPost = ({ posts }) => {
     const [cat, setCat] = useState('');
 
     useEffect(() => {
-        setCat(globalThis?.window?.location.pathname[10].toUpperCase() + globalThis?.window?.location.pathname.slice(11))
+        if (globalThis?.window?.location.pathname.slice(10) === 'dsa') {
+            setCat('DSA');
+        } else {
+            setCat(globalThis?.window?.location.pathname[10].toUpperCase() + globalThis?.window?.location.pathname.slice(11))
+        };
     }, [router.asPath]);
 
     return (
