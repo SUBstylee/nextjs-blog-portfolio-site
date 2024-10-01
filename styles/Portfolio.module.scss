@@ -18,6 +18,11 @@
         .portfolio__item-image {
             border-radius: 1.5rem;
             overflow: hidden;
+            img{
+                    max-width: 100%; /* Ensure the image scales properly */
+                    height: auto; /* Maintain aspect ratio */
+                    display: block; /* Remove any extra space around the image */
+                }
         }
 
         h3 {

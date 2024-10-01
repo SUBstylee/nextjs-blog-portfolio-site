@@ -7,7 +7,7 @@ import Image from 'next/image';
 const Header = () => {
   return (
     <header id='header' className={styles.header}>
-      <div className={`container ${styles.header__container}`}>
+      <div className={`${styles.header__container}`}>
         <h5>Hello I'm</h5>
         <h1>Jeremy Threlfall</h1>
         <h5 className='text-light'>Fullstack Developer</h5>

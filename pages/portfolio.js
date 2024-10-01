@@ -3,7 +3,7 @@ import { Header, Nav, About, Experience, Portfolio, Services, Testimonials, Cont
 export default function PortfolioPage() {
     return (
         <>
-            <div className='port__container mx-auto px-10 mb-8'>
+            <div className='container mx-auto px-10 mb-8'>
                 <Header />
                 <Nav />
                 <About />
