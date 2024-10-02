@@ -21,7 +21,8 @@ const Contact = () => {
   };
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_gcljfxd', 'template_0w7lfqs', form.current, 'VxpFLmFDftKtm_X1n');
+    emailjs.sendForm('service_9aba8ff', 'template_0w7lfqs', form.current, form.current, {
+        publicKey:'VxpFLmFDftKtm_X1n', });
     showNotification();
     e.target.reset();
   };
