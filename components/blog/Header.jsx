@@ -38,25 +38,21 @@ const Header = () => {
       <div className="text-light inline-block w-full border-b py-8">
         <div className="block md:float-left">
           <Link href={port ? '/portfolio' : '/'}>
-            <a>
-              <span className="cursor-pointer text-4xl font-bold ">
-                JJThrelfall
-              </span>
-              <span className="cursor-pointer text-2xl font-bold ">
-                {port ? 'Portfolio' : 'Blog'}
-              </span>
-            </a>
+            <span className="cursor-pointer text-4xl font-bold ">
+              JJThrelfall
+            </span>
+            <span className="cursor-pointer text-2xl font-bold ">
+              {port ? 'Portfolio' : 'Blog'}
+            </span>
           </Link>
         </div>
         <div className="block md:float-left">
           <Link href={port ? '/' : '/portfolio'}>
-            <a>
-              <span
-                className={`text-300 blink-soft float-right mt-2 ml-4 cursor-pointer align-middle font-semibold`}
-              >
-                {port ? 'Blog' : 'Portfolio'}
-              </span>
-            </a>
+            <span
+              className={`text-300 blink-soft float-right ml-4 mt-2 cursor-pointer align-middle font-semibold`}
+            >
+              {port ? 'Blog' : 'Portfolio'}
+            </span>
           </Link>
         </div>
         <div className="flex flex-col md:float-left md:contents">
@@ -65,18 +61,16 @@ const Header = () => {
           </p>
           {categories.map((category) => (
             <Link key={category.slug} href={`/category/${category.slug}`}>
-              <a>
-                <span className="mt-2 ml-4 cursor-pointer  align-middle font-semibold md:float-right">
-                  {category.name}
-                </span>
-              </a>
+              <span className="ml-4 mt-2 cursor-pointer  align-middle font-semibold md:float-right">
+                {category.name}
+              </span>
             </Link>
           ))}
           <p className="text-light mt-2 hidden align-middle md:float-right md:block">
             <small>Categories</small>
           </p>
           {!port && (
-            <div className="mt-2 mr-3 align-middle md:float-right md:block">
+            <div className="mr-3 mt-2 align-middle md:float-right md:block">
               <DarkToggle />
             </div>
           )}
