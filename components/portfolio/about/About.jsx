@@ -15,9 +15,9 @@ const About = () => {
           <Image
             src={ME2}
             alt="Me again"
-            className={`${styles['about__me-image']}`}
-            layout="fill"
-            priority
+            className={styles['about__me-image']}
+            width={336}
+            height={336}
           />
         </div>
         {/* <div className="about__me">
