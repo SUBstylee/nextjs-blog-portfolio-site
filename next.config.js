@@ -2,8 +2,8 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    loader: 'akamai',
-    path: '/',
+    loader: "custom",
+    loaderFile: "./akamai-loader.js"
   },
   externals: {
     'sharp': 'commonjs sharp'
