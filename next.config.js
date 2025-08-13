@@ -2,18 +2,15 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    loader: "custom",
-    loaderFile: "./akamai-loader.js"
-  },
-  externals: {
-    'sharp': 'commonjs sharp'
+    loader: 'custom',
+    loaderFile: './akamai-loader.js',
   },
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.pdf$/i,
-      type: 'asset/source'
-    });
+      type: 'asset/source',
+    })
 
-    return config;
+    return config
   },
-};
+}
