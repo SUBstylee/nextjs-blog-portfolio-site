@@ -40,3 +40,6 @@ yarn-error.log*
 
 # build tar
 nextjs-build.tar.gz
+
+# vps instructions
+VPSINSTRUCTIONS.md
